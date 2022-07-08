@@ -1,6 +1,7 @@
 state("Taz")
 {
 	string255 music : "Taz.exe", 0x81C40, 0x18;
+	string255 level : "Taz.exe", 0x8ECF0, 0x8;
 	int MainMenuSelector : "Taz.exe", 0x8C01C, 0x208;
 }
 
@@ -59,7 +60,7 @@ split {
 }
 
 reset {
-	if (old.music != "taz theme tune.wav" && old.music != "taz options screen.wav" && current.music == "taz options screen.wav"){
+	if (old.music != "taz options screen.wav" && current.level == "frontend" && current.music == "taz options screen.wav"){
 		return true;
 	}
 }
