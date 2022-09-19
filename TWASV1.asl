@@ -1,3 +1,4 @@
+// Don't use this version! Reset doesn't work well!
 state("Taz")
 {
 	string255 music : "Taz.exe", 0x81C40, 0x18;
